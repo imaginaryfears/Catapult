@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>Catapult</title>
+</head>
+<body bgcolor="#444433" text="#f0f8ff" link="#8888ff" alink="#ff5858" vlink="#a058a0">
+<div align="center">
+<br><br><br>
+
+<table bgcolor="#000000" align="center" width="450" height="550">
+<tr><td align="center" valign="middle">
+	<font size=5 color=gray><a name="t">Catapult</a></font><br>
+	<applet title="Catapult" code="Catapult.class" width="400" height="500">
+	</applet>
+</td></tr>
+</table>
+<br>
+<textarea name="更新履歴" wrap="hard" cols="70" rows="4" readonly>
+2007  7/18　☆サーバ移植に伴いステージも変更３つあります。
+2007  7/18　☆難易度変更（弾の威力を下げた）
+2007  5/26　続きからでスコアがリセットされないバグ修正
+2007  5/16　ステージ２追加！（パスワードで続きから出来ます。）
+2007  5/ 1　ランキング登録可能にしました！！（難易度も少々変更）
+2007  4/2?　弾の最大保持数設定
+2007  3/26　アイテム音、セット音追加、その他変更。
+2007  3/22　★アイテム追加。詳しくは下記の補足説明を参照
+2007  3/22　敵の動き微妙に変更
+2007  3/21　★銀弾と金弾が完成。詳しくは下記表参照
+2007  3/21　弾を残り0個以下でも発射できるバグ修正。
+2007  3/10　ゴムの伸びる（ドラッグできる）範囲を限定をしました。
+2007  2/28　SPACEキーでポーズ可能に、(キー判定、爆発改良)
+2007  2/23　スコア表示、連続爆破は点数倍増、当たり判定調整、敵増加
+2007  2/21　ひそかに、載せてみる（授業で提出したもの）
+</textarea>
+<br><br>
+<table cellpadding="3">
+<caption><a name="supple">＜補足説明＞</a></caption>
+<tr><td>
+	<font color="#ffcc99">☆ランキングについて</font><br>
+	<a href="ranking/view.cgi#t" target="_blank">
+		ランキングを見る</a>　上位20位まで登録できます。<br>
+	ゲームオーバー or クリアすると自分のスコアをランキングに登録できます。<br>
+	その際、<font color="#ff9999">名前は必ず入力してください。</font>
+	ランキング表示用なので、適当なもので構いません。<br>
+	コメントも登録できます。必須ではありません、書きたいことがあれば書いてください。<br>
+	名前もコメントも日本語が使えると思います。　ただし、続けてゲームをする際、<br>
+	<font color="#ff6666">日本語入力オンになっていると、操作できない可能性があります。</font><br>
+	</td>
+</tr>
+<tr><td>
+	<font color="#ffcc99">◆「つづきから」について</font><br>
+	タイトル画面で「つづきから」を選択するとパスワード入力画面になります。<BR>
+	ただしいパスワードを入力すると、それに対応したステージから始まります。<br>
+	間違ったパスワードを入力すると、タイトル画面に戻ります。<br>
+	※パスワードはステージをクリアすると、表示されます<br>
+</td><tr>
+<tr><td>
+	<font color="#ffcc99">☆アイテムについて</font><br>
+	以下はアイテムです。<font color="#ff6666">弾を当てるごと下のように変化します。</font><br>
+	<img src="img/item_b.gif" alt="アイテムB"> →
+	<img src="img/item_g.gif" alt="アイテムG"> →
+	<img src="img/item_r.gif" alt="アイテムR"> →
+	<img src="img/item_s.gif" alt="アイテムS"> →
+	<img src="img/item_k.gif" alt="アイテムK"> →
+	<img src="img/item_h.gif" alt="アイテムh"> →最初（青）に戻る。<br>
+	下部の紫のエリアに進入することでアイテムを取ることが出来ます。<br>
+	初めの5つはそれぞれの色でわかるように、取ると同じ色の弾が増えます。<br>
+	最後のハートが付いているものを取るを、HPが増えます。<br>
+	</td>
+</tr><tr><td>
+	<font color="#ffcc99">◇ゲーム中　SPACEキーでポーズできます。</font>
+	</td>
+</tr>
+<tr><td>
+	<font color="#ffcc99">◇弾の発射操作について</font><br>
+	弾を発射するために弾をドラッグしますが、操作性をよくするために、<br>
+	弾の真上だけでなく、弾から弾の大きさ5つ分くらい下側までの範囲なら、<br>
+	ドラッグを開始できるようにしてあります。
+	</td>
+</tr>
+<tr><td>
+	<font color="#ffcc99">◇発射の方向と強さについて</font><br>
+	弾を発射するとき、ドラッグする位置により弾の飛ぶ方向が決まります。<br>
+	さらに発射位置から離れるほど、（ゴムを伸ばすほど）<br>
+	弾のスピードが上がります。<br>
+	そのときスピードの応じて3段階に発射音が変わり、速いほど高い音が出ます。<br>
+	<font color="#ff6666">注意</font>　弾の速度が速すぎると敵をすり抜けてしまうこともあります。<br>
+	<font color="#ff6666">注意</font>　画面（アプレット）の外までドラッグしてしまうと、<br>
+	　　　　弾は発射されず、弾の残数は減ります。<br>
+	</td>
+</tr>
+<tr><td>
+	<font color="#ffcc99">◇ゴムの伸びる（ドラッグできる）範囲は下部の紫の部分です。</font><br>
+	ドラッグ中なら、その範囲を出てもその範囲へ戻ればゴムの伸縮は継続されます。<br>
+	ただし、ドラッグして、その範囲外でマウスボタンを離すとやり直し、<br>
+	つまり弾をセットする前の状態に戻ります。
+	</td>
+</tr>
+</table>
+<br><br>
+<table border="1" cellspacing="0" cellpadding="3" bordercolor="#cc00cc" bordercolorlight="#9933ff" bordercolordark="#990066">
+<caption><a name="tama">弾の詳細表</a></caption>
+<tr align="center"><td>種類</td><td>威力</td><td>連発（分裂）数</td><td>飛空時間</td><td>キー</td>
+</tr>
+<tr align="center">
+	<td align="left" rowspan="2"><img src="img/tama_b.gif" alt="青弾">　青弾<br>（通常弾）</td>
+	<td>１</td><td>５</td><td>普通</td><td>Z</td>
+</tr>
+<tr><td colspan="4">一定時間で弾が増えます。</td>
+</tr>
+<tr align="center">
+<td align="left" rowspan="2"><img src="img/tama_g.gif" alt="緑弾">　緑弾<br>（貫通弾）</td>
+	<td>３</td><td>２</td><td>普通</td><td>X</td>
+</tr>
+<tr><td colspan="4">一定時間で弾が増えます。</td>
+</tr>
+<tr align="center">
+<td align="left" rowspan="2"><img src="img/tama_r.gif" alt="赤弾">　赤弾<br>（誘導弾）</td>
+	<td>１</td><td>１</td><td>やや長い</td><td>C</td>
+</tr>
+<tr><td colspan="4">
+		弾を放った後アプレット上ならどこでも良いので<br>
+		ドラッグすることで弾の速度を変えることが出来ます。<br>
+		スコア500毎で弾が増えます。
+</tr>
+<tr align="center">
+<td align="left" rowspan="2"><img src="img/tama_s.gif" alt="銀弾">　銀弾<br>（壁分裂）</td>
+	<td>１</td><td>２０</td><td>やや長い</td><td>V</td>
+</tr>
+<tr><td colspan="4">
+	左右の<font color="#ff6666">壁に当たると</font>分裂し、横方向のみへ動きます。<br>
+	要は壁に当てれば、そこでシールドのようになります。<br>
+	飛空時間が過ぎるといっせいに消えます。<br>
+	消えるまで次の弾を撃つのは難しいです。</td>
+</tr>
+<tr align="center">
+<td align="left" rowspan="2"><img src="img/tama_k.gif" alt="金弾">　金弾<br>（敵分裂）</td>
+	<td>１</td><td>２０</td><td>長い</td><td>B</td>
+</tr>
+<tr><td colspan="4">
+	<font color="#ff6666">敵に当てる</font>とビックリして4方向に分裂します。<br>
+	銀弾と同じ様に飛空時間が過ぎるといっせいに消えます。
+	</td>
+</tr>
+<tr><td colspan="5">
+	威力　：　1発で敵を何体倒せるか（貫通力）<br>
+	連発　：　発射できる弾の数、画面上に飛空している弾の合計数<br>
+	飛空時間　：　飛空出来る時間、この時間が過ぎると弾は消える<br>
+	キー　：　キーボードのそれぞれのボタンで弾をセットできる<br></td>
+</tr>
+</table>
+<br><br><br>
+<table border="1" cellspacing="0" cellpadding="3" bordercolor="#0033cc" bordercolorlight="#0099ff" bordercolordark="#000066">
+<caption><a name="enemy">敵の詳細表</a></caption>
+<tr align="center"><td>種類</td><td>耐久力</td><td>速度（縦｜横）</td><td>速度変化</td>
+</tr>
+<tr align="center" valign="middle">
+	<td><img src="img/enemy01.gif" alt="敵１" style="float: left;">　敵１</td>
+	<td>１</td><td>１｜０〜３</td><td>なし</td>
+</tr>
+<tr align="center" valign="middle">
+	<td><img src="img/enemy02.gif" alt="ステルス" style="float: left;">　敵２</td>
+	<td>１</td><td>２｜０</td><td>なし</td>
+</tr>
+<tr align="center" valign="middle">
+	<td><img src="img/enemy03.gif" alt="敵３" style="float: left;">　敵３</td>
+	<td>１</td><td>１｜０〜３</td><td>横方向ランダム</td>
+</tr>
+<tr align="center" valign="middle">
+	<td><img src="img/enemy04.gif" alt="UFO?" style="float: left;">　敵４</td>
+	<td>１</td><td>１｜０〜４</td><td>横方向ランダム</td>
+</tr>
+</table>
+
+<br>
+</div>
+</body>
+</html>
